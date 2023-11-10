@@ -1,0 +1,26 @@
+{
+  "name": "Economiza-API",
+  "version": "1.0.0",
+  "main": "main.ts",
+  "author": "Vitor Hugo (https://github.com/vhcsilva)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "test": "jest --passWithNoTests --noStackTrace --runInBand",
+    "test:verbose": "jest --passWithNoTests --runInBand",
+    "test:unit": "npm test -- --watchAll -c jest-unit-config.js",
+    "test:integration": "npm test -- --watchAll -c jest-integration-config.js",
+    "test:staged": "npm test -- --findRelatedTests",
+    "test:ci": "npm test -- --coverage"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
+    "mongodb": "^6.2.0"
+  }
+}
