@@ -1,4 +1,4 @@
-import { MongoHelper } from "./MongoHelper";
+import { MongoHelper } from "../../infra/db/MongoHelper";
 
 export default class GetList {
   constructor () {

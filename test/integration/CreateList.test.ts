@@ -1,8 +1,8 @@
 import 'dotenv/config';
 
-import { MongoHelper } from "../../src/MongoHelper";
-import CreateList from '../../src/CreateList';
-import GetList from '../../src/GetList';
+import { MongoHelper } from "../../src/infra/db/MongoHelper";
+import CreateList from '../../src/application/usecases/CreateList';
+import GetList from '../../src/application/usecases/GetList';
 
 describe("CreateList", () => {
   beforeAll(async () => {

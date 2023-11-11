@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { MongoHelper } from "./MongoHelper";
+import { MongoHelper } from "../../infra/db/MongoHelper";
 
 export default class CreateList {
   constructor () {

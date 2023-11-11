@@ -1,8 +1,8 @@
 import 'dotenv/config';
 
-import CreateProduct from "../../src/CreateProduct";
-import { MongoHelper } from "../../src/MongoHelper";
-import GetProduct from '../../src/GetProduct';
+import CreateProduct from "../../src/application/usecases/CreateProduct";
+import { MongoHelper } from "../../src/infra/db/MongoHelper";
+import GetProduct from '../../src/application/usecases/GetProduct';
 
 describe("CreateProduct", () => {
   beforeAll(async () => {
