@@ -9,7 +9,8 @@ export default class CreateList {
     const listId = crypto.randomUUID().toString();
     const listInput = {
       listId: listId,
-      name: input.name
+      name: input.name,
+      products: []
     };
     const listsCollection = await MongoHelper.getCollection("lists");
     await listsCollection.insertOne(listInput);
