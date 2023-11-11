@@ -85,7 +85,7 @@ describe("AddProductToList", () => {
       listId: createListOutput.listId,
       productsIds: [createProductOutput.productId, "INVALID_ID"]
     };
-    await expect(() => addProductToList.execute(withEmptyArrayInput)).rejects.toThrowError(new Error("Invalid product: INVALID_ID"));
+    await expect(() => addProductToList.execute(withEmptyArrayInput)).rejects.toThrowError(new Error("Product not found: INVALID_ID"));
   });
 
   afterAll(async () => {

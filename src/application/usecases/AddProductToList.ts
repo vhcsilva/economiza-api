@@ -13,9 +13,7 @@ export default class AddProductToList {
     if (!input.productsIds?.length)
       throw new Error("Products not provided");
     for (const productId of input.productsIds) {
-      const product = await this.getProduct.execute(productId);
-      if (!product)
-        throw new Error(`Invalid product: ${productId}`);
+      await this.getProduct.execute(productId);
     }
     const listsCollection = await MongoHelper.getCollection("lists");
     await listsCollection.updateOne({
